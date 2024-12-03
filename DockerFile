@@ -1,0 +1,10 @@
+FROM eclipse-temurin:17.0.13_11-jre-alpine
+
+WORKDIR /app
+
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} kcb-project-task-test.jar
+
+ENTRYPOINT ["sh", "-c", "java ${JAVA_OPTS} -jar /app/kcb-project-task-test.jar ${0} ${@}"]
+
+# docker build -t KCB_TEST:1.0

@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: kcb-project-task-test
+
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:file:./database
+    driverClassName: org.h2.Driver
+    username: sa
+    password: 
+    hikari:
+      minimumIdle: 1
+      maximumPoolSize: 10
+      idleTimeout: 60000
+      maxLifetime: 300000
+      poolName: kcb-assessment-db-pool
+  jpa:
+    properties:
+      dialect: org.hibernate.dialect.H2Dialect
+      database-platform: org.hibernate.dialect.H2Dialect

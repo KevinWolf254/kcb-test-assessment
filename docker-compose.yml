@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+
+  kcb-test:
+    image: KCB_TEST:1.0
+    container_name: kcb-test
+    ports:
+      - "8080:8080"
